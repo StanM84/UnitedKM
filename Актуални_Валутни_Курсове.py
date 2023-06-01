@@ -7,7 +7,7 @@ driver = webdriver.Chrome()
 driver.get("https://united-km.com")
 
 try:
-    # Изчакваме до 10 секунди, докато елементът стане видим
+    # Изчаква до 10 секунди, докато елементът стане видим
     element = WebDriverWait(driver, 10).until(
         EC.visibility_of_element_located((By.XPATH, "//*[contains(text(), 'Актуални Валутни Курсове')]"))
     )
