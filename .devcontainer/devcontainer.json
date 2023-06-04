@@ -1,0 +1,14 @@
+{
+  "image": "python:3.9",
+  "extensions": [],
+  "mounts": [],
+  "remoteUser": "vscode",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}"
+  },
+  "forwardPorts": [],
+  "postCreateCommand": "pip install -r requirements.txt && apt-get update && apt-get install -y chromium-driver"
+}
